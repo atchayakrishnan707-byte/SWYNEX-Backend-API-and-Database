@@ -1,2 +1,133 @@
-# SWYNEX-Backend-API-and-Database
-ScopeSentry backend implementation using FastAPI and MongoDB.
+
+# SWYNEX Backend API and Database
+
+## ScopeSentry
+
+AI-Powered Project Scope Management and Change Intelligence Platform.
+
+## Overview
+
+This repository contains the backend API and database implementation for ScopeSentry.
+
+The backend manages project information, validates incoming requests and stores project records in MongoDB.
+
+## Technology Stack
+
+- Python
+- FastAPI
+- MongoDB
+- PyMongo Async
+- Pydantic
+- Uvicorn
+
+## Features
+
+- Create projects
+- Retrieve all projects
+- Retrieve individual projects
+- Update project details
+- Delete projects
+- Request validation
+- MongoDB persistence
+- Error handling
+- API documentation through Swagger UI
+
+## Project Structure
+
+```text
+SWYNEX-Backend-API-and-Database/
+│
+├── app/
+│   ├── routes/
+│   │   ├── __init__.py
+│   │   └── projects.py
+│   │
+│   ├── __init__.py
+│   ├── main.py
+│   ├── config.py
+│   ├── database.py
+│   └── models.py
+│
+├── requirements.txt
+├── .env.example
+├── .gitignore
+└── README.md
+```
+
+## Installation
+
+### 1. Clone the repository
+
+```bash
+git clone YOUR_GITHUB_REPOSITORY_URL
+cd SWYNEX-Backend-API-and-Database
+```
+
+### 2. Create a virtual environment
+
+```bash
+python -m venv venv
+```
+
+Activate on Windows:
+
+```bash
+venv\Scripts\activate
+```
+
+### 3. Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Configure MongoDB
+
+Create a `.env` file using `.env.example` as a template.
+
+Configure your MongoDB connection URL and database name.
+
+### 5. Start the application
+
+```bash
+uvicorn app.main:app --reload
+```
+
+## API Documentation
+
+Open:
+
+http://127.0.0.1:8000/docs
+
+## Base API URL
+
+http://127.0.0.1:8000/api
+
+## Project Endpoints
+
+| Method | Endpoint | Description |
+|---|---|---|
+| POST | /api/projects/ | Create project |
+| GET | /api/projects/ | Get all projects |
+| GET | /api/projects/{id} | Get project |
+| PUT | /api/projects/{id} | Update project |
+| DELETE | /api/projects/{id} | Delete project |
+
+## Validation
+
+The project resource validates:
+
+- Project name length
+- Description length
+- Positive budget
+- Currency format
+- Valid dates
+- Project status
+- MongoDB ObjectId format
+
+## Project Status
+
+Initial backend API and MongoDB persistence implementation for the SWYNEX Full Stack Developer Internship.
+
+Additional modules such as authentication, requirement management, AI analysis and approval workflows are planned for subsequent development.
+
