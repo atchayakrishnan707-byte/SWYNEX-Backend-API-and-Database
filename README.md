@@ -56,42 +56,19 @@ SWYNEX-Backend-API-and-Database/
 
 ## Installation
 
-### 1. Clone the repository
+git clone https://github.com/atchayakrishnan707-byte/SWYNEX-Backend-API-and-Database.git
 
-```bash
-git clone YOUR_GITHUB_REPOSITORY_URL
 cd SWYNEX-Backend-API-and-Database
-```
 
-### 2. Create a virtual environment
+python -m venv .venv
 
-```bash
-python -m venv venv
-```
+.venv\Scripts\Activate.ps1
 
-Activate on Windows:
-
-```bash
-venv\Scripts\activate
-```
-
-### 3. Install dependencies
-
-```bash
 pip install -r requirements.txt
-```
 
-### 4. Configure MongoDB
+copy .env.example .env
 
-Create a `.env` file using `.env.example` as a template.
-
-Configure your MongoDB connection URL and database name.
-
-### 5. Start the application
-
-```bash
-uvicorn app.main:app --reload
-```
+python -m uvicorn app.main:app --reload
 
 ## API Documentation
 
