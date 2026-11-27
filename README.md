@@ -54,9 +54,10 @@ SWYNEX-Backend-API-and-Database/
 └── README.md
 ```
 
+
 ## Installation
 
-
+```powershell
 git clone https://github.com/atchayakrishnan707-byte/SWYNEX-Backend-API-and-Database.git
 
 cd SWYNEX-Backend-API-and-Database
@@ -70,6 +71,8 @@ pip install -r requirements.txt
 copy .env.example .env
 
 python -m uvicorn app.main:app --reload
+```
+
 
 
 ## API Documentation
